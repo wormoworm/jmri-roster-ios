@@ -1,0 +1,649 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		286D0407266A5FD700F5AEAE /* JMRI_rosterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D0406266A5FD700F5AEAE /* JMRI_rosterApp.swift */; };
+		286D0409266A5FD700F5AEAE /* RosterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D0408266A5FD700F5AEAE /* RosterListView.swift */; };
+		286D040B266A5FD900F5AEAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 286D040A266A5FD900F5AEAE /* Assets.xcassets */; };
+		286D040E266A5FD900F5AEAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 286D040D266A5FD900F5AEAE /* Preview Assets.xcassets */; };
+		286D0410266A5FD900F5AEAE /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D040F266A5FD900F5AEAE /* Persistence.swift */; };
+		286D0413266A5FD900F5AEAE /* JMRI_roster.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 286D0411266A5FD900F5AEAE /* JMRI_roster.xcdatamodeld */; };
+		286D041E266A5FD900F5AEAE /* JMRI_rosterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D041D266A5FD900F5AEAE /* JMRI_rosterTests.swift */; };
+		286D0429266A5FD900F5AEAE /* JMRI_rosterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D0428266A5FD900F5AEAE /* JMRI_rosterUITests.swift */; };
+		286D0437266A79BC00F5AEAE /* RosterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D0436266A79BC00F5AEAE /* RosterViewModel.swift */; };
+		286D043A266A7A8A00F5AEAE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 286D0439266A7A8A00F5AEAE /* Alamofire */; };
+		286D043D266A7B2400F5AEAE /* RosterEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D043C266A7B2400F5AEAE /* RosterEntry.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		286D041A266A5FD900F5AEAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 286D03FB266A5FD700F5AEAE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 286D0402266A5FD700F5AEAE;
+			remoteInfo = "JMRI roster";
+		};
+		286D0425266A5FD900F5AEAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 286D03FB266A5FD700F5AEAE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 286D0402266A5FD700F5AEAE;
+			remoteInfo = "JMRI roster";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		286D0403266A5FD700F5AEAE /* JMRI roster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JMRI roster.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		286D0406266A5FD700F5AEAE /* JMRI_rosterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMRI_rosterApp.swift; sourceTree = "<group>"; };
+		286D0408266A5FD700F5AEAE /* RosterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterListView.swift; sourceTree = "<group>"; };
+		286D040A266A5FD900F5AEAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		286D040D266A5FD900F5AEAE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		286D040F266A5FD900F5AEAE /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		286D0412266A5FD900F5AEAE /* JMRI_roster.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JMRI_roster.xcdatamodel; sourceTree = "<group>"; };
+		286D0414266A5FD900F5AEAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		286D0419266A5FD900F5AEAE /* JMRI rosterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "JMRI rosterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		286D041D266A5FD900F5AEAE /* JMRI_rosterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMRI_rosterTests.swift; sourceTree = "<group>"; };
+		286D041F266A5FD900F5AEAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		286D0424266A5FD900F5AEAE /* JMRI rosterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "JMRI rosterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		286D0428266A5FD900F5AEAE /* JMRI_rosterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMRI_rosterUITests.swift; sourceTree = "<group>"; };
+		286D042A266A5FD900F5AEAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		286D0436266A79BC00F5AEAE /* RosterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterViewModel.swift; sourceTree = "<group>"; };
+		286D043C266A7B2400F5AEAE /* RosterEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterEntry.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		286D0400266A5FD700F5AEAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				286D043A266A7A8A00F5AEAE /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		286D0416266A5FD900F5AEAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		286D0421266A5FD900F5AEAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		286D03FA266A5FD700F5AEAE = {
+			isa = PBXGroup;
+			children = (
+				286D0405266A5FD700F5AEAE /* JMRI roster */,
+				286D041C266A5FD900F5AEAE /* JMRI rosterTests */,
+				286D0427266A5FD900F5AEAE /* JMRI rosterUITests */,
+				286D0404266A5FD700F5AEAE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		286D0404266A5FD700F5AEAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				286D0403266A5FD700F5AEAE /* JMRI roster.app */,
+				286D0419266A5FD900F5AEAE /* JMRI rosterTests.xctest */,
+				286D0424266A5FD900F5AEAE /* JMRI rosterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		286D0405266A5FD700F5AEAE /* JMRI roster */ = {
+			isa = PBXGroup;
+			children = (
+				286D043B266A7B0700F5AEAE /* Model */,
+				286D0406266A5FD700F5AEAE /* JMRI_rosterApp.swift */,
+				286D0408266A5FD700F5AEAE /* RosterListView.swift */,
+				286D040A266A5FD900F5AEAE /* Assets.xcassets */,
+				286D040F266A5FD900F5AEAE /* Persistence.swift */,
+				286D0414266A5FD900F5AEAE /* Info.plist */,
+				286D0411266A5FD900F5AEAE /* JMRI_roster.xcdatamodeld */,
+				286D040C266A5FD900F5AEAE /* Preview Content */,
+				286D0436266A79BC00F5AEAE /* RosterViewModel.swift */,
+			);
+			path = "JMRI roster";
+			sourceTree = "<group>";
+		};
+		286D040C266A5FD900F5AEAE /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				286D040D266A5FD900F5AEAE /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		286D041C266A5FD900F5AEAE /* JMRI rosterTests */ = {
+			isa = PBXGroup;
+			children = (
+				286D041D266A5FD900F5AEAE /* JMRI_rosterTests.swift */,
+				286D041F266A5FD900F5AEAE /* Info.plist */,
+			);
+			path = "JMRI rosterTests";
+			sourceTree = "<group>";
+		};
+		286D0427266A5FD900F5AEAE /* JMRI rosterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				286D0428266A5FD900F5AEAE /* JMRI_rosterUITests.swift */,
+				286D042A266A5FD900F5AEAE /* Info.plist */,
+			);
+			path = "JMRI rosterUITests";
+			sourceTree = "<group>";
+		};
+		286D043B266A7B0700F5AEAE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				286D043C266A7B2400F5AEAE /* RosterEntry.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		286D0402266A5FD700F5AEAE /* JMRI roster */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 286D042D266A5FD900F5AEAE /* Build configuration list for PBXNativeTarget "JMRI roster" */;
+			buildPhases = (
+				286D03FF266A5FD700F5AEAE /* Sources */,
+				286D0400266A5FD700F5AEAE /* Frameworks */,
+				286D0401266A5FD700F5AEAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "JMRI roster";
+			packageProductDependencies = (
+				286D0439266A7A8A00F5AEAE /* Alamofire */,
+			);
+			productName = "JMRI roster";
+			productReference = 286D0403266A5FD700F5AEAE /* JMRI roster.app */;
+			productType = "com.apple.product-type.application";
+		};
+		286D0418266A5FD900F5AEAE /* JMRI rosterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 286D0430266A5FD900F5AEAE /* Build configuration list for PBXNativeTarget "JMRI rosterTests" */;
+			buildPhases = (
+				286D0415266A5FD900F5AEAE /* Sources */,
+				286D0416266A5FD900F5AEAE /* Frameworks */,
+				286D0417266A5FD900F5AEAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				286D041B266A5FD900F5AEAE /* PBXTargetDependency */,
+			);
+			name = "JMRI rosterTests";
+			productName = "JMRI rosterTests";
+			productReference = 286D0419266A5FD900F5AEAE /* JMRI rosterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		286D0423266A5FD900F5AEAE /* JMRI rosterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 286D0433266A5FD900F5AEAE /* Build configuration list for PBXNativeTarget "JMRI rosterUITests" */;
+			buildPhases = (
+				286D0420266A5FD900F5AEAE /* Sources */,
+				286D0421266A5FD900F5AEAE /* Frameworks */,
+				286D0422266A5FD900F5AEAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				286D0426266A5FD900F5AEAE /* PBXTargetDependency */,
+			);
+			name = "JMRI rosterUITests";
+			productName = "JMRI rosterUITests";
+			productReference = 286D0424266A5FD900F5AEAE /* JMRI rosterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		286D03FB266A5FD700F5AEAE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					286D0402266A5FD700F5AEAE = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					286D0418266A5FD900F5AEAE = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 286D0402266A5FD700F5AEAE;
+					};
+					286D0423266A5FD900F5AEAE = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 286D0402266A5FD700F5AEAE;
+					};
+				};
+			};
+			buildConfigurationList = 286D03FE266A5FD700F5AEAE /* Build configuration list for PBXProject "JMRI roster" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 286D03FA266A5FD700F5AEAE;
+			packageReferences = (
+				286D0438266A7A8A00F5AEAE /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
+			productRefGroup = 286D0404266A5FD700F5AEAE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				286D0402266A5FD700F5AEAE /* JMRI roster */,
+				286D0418266A5FD900F5AEAE /* JMRI rosterTests */,
+				286D0423266A5FD900F5AEAE /* JMRI rosterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		286D0401266A5FD700F5AEAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				286D040E266A5FD900F5AEAE /* Preview Assets.xcassets in Resources */,
+				286D040B266A5FD900F5AEAE /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		286D0417266A5FD900F5AEAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		286D0422266A5FD900F5AEAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		286D03FF266A5FD700F5AEAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				286D0413266A5FD900F5AEAE /* JMRI_roster.xcdatamodeld in Sources */,
+				286D0410266A5FD900F5AEAE /* Persistence.swift in Sources */,
+				286D0437266A79BC00F5AEAE /* RosterViewModel.swift in Sources */,
+				286D0409266A5FD700F5AEAE /* RosterListView.swift in Sources */,
+				286D043D266A7B2400F5AEAE /* RosterEntry.swift in Sources */,
+				286D0407266A5FD700F5AEAE /* JMRI_rosterApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		286D0415266A5FD900F5AEAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				286D041E266A5FD900F5AEAE /* JMRI_rosterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		286D0420266A5FD900F5AEAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				286D0429266A5FD900F5AEAE /* JMRI_rosterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		286D041B266A5FD900F5AEAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 286D0402266A5FD700F5AEAE /* JMRI roster */;
+			targetProxy = 286D041A266A5FD900F5AEAE /* PBXContainerItemProxy */;
+		};
+		286D0426266A5FD900F5AEAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 286D0402266A5FD700F5AEAE /* JMRI roster */;
+			targetProxy = 286D0425266A5FD900F5AEAE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		286D042B266A5FD900F5AEAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		286D042C266A5FD900F5AEAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		286D042E266A5FD900F5AEAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"JMRI roster/Preview Content\"";
+				DEVELOPMENT_TEAM = 5DXAVCJLMU;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "JMRI roster/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.tomhomewood.JMRI-roster";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		286D042F266A5FD900F5AEAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"JMRI roster/Preview Content\"";
+				DEVELOPMENT_TEAM = 5DXAVCJLMU;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "JMRI roster/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.tomhomewood.JMRI-roster";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		286D0431266A5FD900F5AEAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5DXAVCJLMU;
+				INFOPLIST_FILE = "JMRI rosterTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.tomhomewood.JMRI-rosterTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JMRI roster.app/JMRI roster";
+			};
+			name = Debug;
+		};
+		286D0432266A5FD900F5AEAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5DXAVCJLMU;
+				INFOPLIST_FILE = "JMRI rosterTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.tomhomewood.JMRI-rosterTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JMRI roster.app/JMRI roster";
+			};
+			name = Release;
+		};
+		286D0434266A5FD900F5AEAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5DXAVCJLMU;
+				INFOPLIST_FILE = "JMRI rosterUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.tomhomewood.JMRI-rosterUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "JMRI roster";
+			};
+			name = Debug;
+		};
+		286D0435266A5FD900F5AEAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5DXAVCJLMU;
+				INFOPLIST_FILE = "JMRI rosterUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.tomhomewood.JMRI-rosterUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "JMRI roster";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		286D03FE266A5FD700F5AEAE /* Build configuration list for PBXProject "JMRI roster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				286D042B266A5FD900F5AEAE /* Debug */,
+				286D042C266A5FD900F5AEAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		286D042D266A5FD900F5AEAE /* Build configuration list for PBXNativeTarget "JMRI roster" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				286D042E266A5FD900F5AEAE /* Debug */,
+				286D042F266A5FD900F5AEAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		286D0430266A5FD900F5AEAE /* Build configuration list for PBXNativeTarget "JMRI rosterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				286D0431266A5FD900F5AEAE /* Debug */,
+				286D0432266A5FD900F5AEAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		286D0433266A5FD900F5AEAE /* Build configuration list for PBXNativeTarget "JMRI rosterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				286D0434266A5FD900F5AEAE /* Debug */,
+				286D0435266A5FD900F5AEAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		286D0438266A7A8A00F5AEAE /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		286D0439266A7A8A00F5AEAE /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 286D0438266A7A8A00F5AEAE /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		286D0411266A5FD900F5AEAE /* JMRI_roster.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				286D0412266A5FD900F5AEAE /* JMRI_roster.xcdatamodel */,
+			);
+			currentVersion = 286D0412266A5FD900F5AEAE /* JMRI_roster.xcdatamodel */;
+			path = JMRI_roster.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 286D03FB266A5FD700F5AEAE /* Project object */;
+}
