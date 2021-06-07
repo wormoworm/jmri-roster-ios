@@ -18,6 +18,9 @@
 		286D0437266A79BC00F5AEAE /* RosterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D0436266A79BC00F5AEAE /* RosterViewModel.swift */; };
 		286D043A266A7A8A00F5AEAE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 286D0439266A7A8A00F5AEAE /* Alamofire */; };
 		286D043D266A7B2400F5AEAE /* RosterEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D043C266A7B2400F5AEAE /* RosterEntry.swift */; };
+		28D5D63D266E71240088E1FB /* RosterListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D5D63C266E71240088E1FB /* RosterListItemView.swift */; };
+		28D5D640266EE1D80088E1FB /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 28D5D63F266EE1D80088E1FB /* Nuke */; };
+		28D5D643266EE2870088E1FB /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 28D5D642266EE2870088E1FB /* NukeUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,7 @@
 		286D042A266A5FD900F5AEAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		286D0436266A79BC00F5AEAE /* RosterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterViewModel.swift; sourceTree = "<group>"; };
 		286D043C266A7B2400F5AEAE /* RosterEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterEntry.swift; sourceTree = "<group>"; };
+		28D5D63C266E71240088E1FB /* RosterListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterListItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +65,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28D5D643266EE2870088E1FB /* NukeUI in Frameworks */,
 				286D043A266A7A8A00F5AEAE /* Alamofire in Frameworks */,
+				28D5D640266EE1D80088E1FB /* Nuke in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,9 +111,9 @@
 		286D0405266A5FD700F5AEAE /* JMRI roster */ = {
 			isa = PBXGroup;
 			children = (
+				28D5D63B266E70EF0088E1FB /* Views */,
 				286D043B266A7B0700F5AEAE /* Model */,
 				286D0406266A5FD700F5AEAE /* JMRI_rosterApp.swift */,
-				286D0408266A5FD700F5AEAE /* RosterListView.swift */,
 				286D040A266A5FD900F5AEAE /* Assets.xcassets */,
 				286D040F266A5FD900F5AEAE /* Persistence.swift */,
 				286D0414266A5FD900F5AEAE /* Info.plist */,
@@ -152,6 +158,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		28D5D63B266E70EF0088E1FB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				286D0408266A5FD700F5AEAE /* RosterListView.swift */,
+				28D5D63C266E71240088E1FB /* RosterListItemView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,6 +185,8 @@
 			name = "JMRI roster";
 			packageProductDependencies = (
 				286D0439266A7A8A00F5AEAE /* Alamofire */,
+				28D5D63F266EE1D80088E1FB /* Nuke */,
+				28D5D642266EE2870088E1FB /* NukeUI */,
 			);
 			productName = "JMRI roster";
 			productReference = 286D0403266A5FD700F5AEAE /* JMRI roster.app */;
@@ -244,6 +261,8 @@
 			mainGroup = 286D03FA266A5FD700F5AEAE;
 			packageReferences = (
 				286D0438266A7A8A00F5AEAE /* XCRemoteSwiftPackageReference "Alamofire" */,
+				28D5D63E266EE1D80088E1FB /* XCRemoteSwiftPackageReference "Nuke" */,
+				28D5D641266EE2870088E1FB /* XCRemoteSwiftPackageReference "NukeUI" */,
 			);
 			productRefGroup = 286D0404266A5FD700F5AEAE /* Products */;
 			projectDirPath = "";
@@ -291,6 +310,7 @@
 				286D0410266A5FD900F5AEAE /* Persistence.swift in Sources */,
 				286D0437266A79BC00F5AEAE /* RosterViewModel.swift in Sources */,
 				286D0409266A5FD700F5AEAE /* RosterListView.swift in Sources */,
+				28D5D63D266E71240088E1FB /* RosterListItemView.swift in Sources */,
 				286D043D266A7B2400F5AEAE /* RosterEntry.swift in Sources */,
 				286D0407266A5FD700F5AEAE /* JMRI_rosterApp.swift in Sources */,
 			);
@@ -622,6 +642,22 @@
 				minimumVersion = 5.2.0;
 			};
 		};
+		28D5D63E266EE1D80088E1FB /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.2.0;
+			};
+		};
+		28D5D641266EE2870088E1FB /* XCRemoteSwiftPackageReference "NukeUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/NukeUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -629,6 +665,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 286D0438266A7A8A00F5AEAE /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		28D5D63F266EE1D80088E1FB /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 28D5D63E266EE1D80088E1FB /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+		28D5D642266EE2870088E1FB /* NukeUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 28D5D641266EE2870088E1FB /* XCRemoteSwiftPackageReference "NukeUI" */;
+			productName = NukeUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 
