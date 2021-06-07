@@ -14,7 +14,7 @@ final class RosterViewModel: ObservableObject {
     @Published var rosterEntries = [RosterEntry]()
     
     init() {
-        
+        fetchRosterEntries()
     }
     
     func fetchRosterEntries() {
@@ -22,6 +22,8 @@ final class RosterViewModel: ObservableObject {
         request.responseDecodable(of: RosterResponse.self) { (response) in
             guard let rosterReponse = response.value else { return }
             self.rosterEntries = rosterReponse.rosterEntries
+            self.rosterEntries.forEach { (rosterEntry) in
+            }
         }
     }
 }
