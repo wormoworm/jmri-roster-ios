@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2842D6B4266FACC7004B018A /* AppLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2842D6B3266FACC7004B018A /* AppLoadingView.swift */; };
+		2842D6B6266FAFCF004B018A /* RosterEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2842D6B5266FAFCF004B018A /* RosterEntryView.swift */; };
+		2842D6B9266FB15A004B018A /* RosterEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2842D6B8266FB15A004B018A /* RosterEntryViewModel.swift */; };
+		2842D6BB266FB180004B018A /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2842D6BA266FB180004B018A /* LoadingState.swift */; };
+		2842D6BD266FB77D004B018A /* RosterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2842D6BC266FB77D004B018A /* RosterListView.swift */; };
 		286D0407266A5FD700F5AEAE /* JMRI_rosterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D0406266A5FD700F5AEAE /* JMRI_rosterApp.swift */; };
-		286D0409266A5FD700F5AEAE /* RosterListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D0408266A5FD700F5AEAE /* RosterListView.swift */; };
+		286D0409266A5FD700F5AEAE /* RosterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D0408266A5FD700F5AEAE /* RosterView.swift */; };
 		286D040B266A5FD900F5AEAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 286D040A266A5FD900F5AEAE /* Assets.xcassets */; };
 		286D040E266A5FD900F5AEAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 286D040D266A5FD900F5AEAE /* Preview Assets.xcassets */; };
 		286D0410266A5FD900F5AEAE /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D040F266A5FD900F5AEAE /* Persistence.swift */; };
@@ -41,9 +46,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2842D6B3266FACC7004B018A /* AppLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLoadingView.swift; sourceTree = "<group>"; };
+		2842D6B5266FAFCF004B018A /* RosterEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterEntryView.swift; sourceTree = "<group>"; };
+		2842D6B8266FB15A004B018A /* RosterEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterEntryViewModel.swift; sourceTree = "<group>"; };
+		2842D6BA266FB180004B018A /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
+		2842D6BC266FB77D004B018A /* RosterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterListView.swift; sourceTree = "<group>"; };
 		286D0403266A5FD700F5AEAE /* JMRI roster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JMRI roster.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		286D0406266A5FD700F5AEAE /* JMRI_rosterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JMRI_rosterApp.swift; sourceTree = "<group>"; };
-		286D0408266A5FD700F5AEAE /* RosterListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterListView.swift; sourceTree = "<group>"; };
+		286D0408266A5FD700F5AEAE /* RosterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterView.swift; sourceTree = "<group>"; };
 		286D040A266A5FD900F5AEAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		286D040D266A5FD900F5AEAE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		286D040F266A5FD900F5AEAE /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -88,6 +98,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2842D6B7266FB110004B018A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				286D0436266A79BC00F5AEAE /* RosterViewModel.swift */,
+				2842D6B8266FB15A004B018A /* RosterEntryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		286D03FA266A5FD700F5AEAE = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +130,7 @@
 		286D0405266A5FD700F5AEAE /* JMRI roster */ = {
 			isa = PBXGroup;
 			children = (
+				2842D6B7266FB110004B018A /* ViewModel */,
 				28D5D63B266E70EF0088E1FB /* Views */,
 				286D043B266A7B0700F5AEAE /* Model */,
 				286D0406266A5FD700F5AEAE /* JMRI_rosterApp.swift */,
@@ -119,7 +139,6 @@
 				286D0414266A5FD900F5AEAE /* Info.plist */,
 				286D0411266A5FD900F5AEAE /* JMRI_roster.xcdatamodeld */,
 				286D040C266A5FD900F5AEAE /* Preview Content */,
-				286D0436266A79BC00F5AEAE /* RosterViewModel.swift */,
 			);
 			path = "JMRI roster";
 			sourceTree = "<group>";
@@ -154,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				286D043C266A7B2400F5AEAE /* RosterEntry.swift */,
+				2842D6BA266FB180004B018A /* LoadingState.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -161,8 +181,11 @@
 		28D5D63B266E70EF0088E1FB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				286D0408266A5FD700F5AEAE /* RosterListView.swift */,
+				286D0408266A5FD700F5AEAE /* RosterView.swift */,
 				28D5D63C266E71240088E1FB /* RosterListItemView.swift */,
+				2842D6B3266FACC7004B018A /* AppLoadingView.swift */,
+				2842D6B5266FAFCF004B018A /* RosterEntryView.swift */,
+				2842D6BC266FB77D004B018A /* RosterListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -307,12 +330,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				286D0413266A5FD900F5AEAE /* JMRI_roster.xcdatamodeld in Sources */,
+				2842D6B4266FACC7004B018A /* AppLoadingView.swift in Sources */,
 				286D0410266A5FD900F5AEAE /* Persistence.swift in Sources */,
 				286D0437266A79BC00F5AEAE /* RosterViewModel.swift in Sources */,
-				286D0409266A5FD700F5AEAE /* RosterListView.swift in Sources */,
+				286D0409266A5FD700F5AEAE /* RosterView.swift in Sources */,
 				28D5D63D266E71240088E1FB /* RosterListItemView.swift in Sources */,
+				2842D6B9266FB15A004B018A /* RosterEntryViewModel.swift in Sources */,
 				286D043D266A7B2400F5AEAE /* RosterEntry.swift in Sources */,
 				286D0407266A5FD700F5AEAE /* JMRI_rosterApp.swift in Sources */,
+				2842D6BD266FB77D004B018A /* RosterListView.swift in Sources */,
+				2842D6B6266FAFCF004B018A /* RosterEntryView.swift in Sources */,
+				2842D6BB266FB180004B018A /* LoadingState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

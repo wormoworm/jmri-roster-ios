@@ -25,6 +25,7 @@ final class RosterEntryResponse: Decodable {
 
 final class RosterEntry: Decodable, Identifiable {
     
+    
     let id: String
     let dccAddress: String
     let number: String?

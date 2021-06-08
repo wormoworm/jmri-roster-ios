@@ -13,7 +13,7 @@ struct JMRI_rosterApp: App {
 
     var body: some Scene {
         WindowGroup {
-            RosterListView(viewModel: RosterViewModel())
+            RosterView(viewModel: RosterViewModel())
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

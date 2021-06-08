@@ -11,6 +11,7 @@ import Alamofire
 
 final class RosterViewModel: ObservableObject {
     
+    @Published var state: LoadingState = .loading
     @Published var rosterEntries = [RosterEntry]()
     
     init() {
@@ -24,6 +25,7 @@ final class RosterViewModel: ObservableObject {
             self.rosterEntries = rosterReponse.rosterEntries
             self.rosterEntries.forEach { (rosterEntry) in
             }
+            self.state = .loaded
         }
     }
 }
