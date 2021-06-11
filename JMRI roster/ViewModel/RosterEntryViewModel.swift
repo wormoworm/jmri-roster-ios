@@ -8,20 +8,21 @@
 import Foundation
 import Alamofire
 
-final class RosterEntryViewModel: ObservableObject {
+final class RosterEntryViewModel: ObservableObject, RosterApiFactory {
     
     @Published var state: LoadingState = .loading
     @Published var rosterEntry: RosterEntry?
     
+    private(set) var rosterId: String
+    
     init(rosterId: String) {
-        fetchRosterEntry(rosterId: rosterId)
+        self.rosterId = rosterId
     }
-
-    func fetchRosterEntry(rosterId: String) {
-        let request = AF.request("https://roster.tomstrains.co.uk/api/v1/locomotive/\(rosterId)")
-        request.responseDecodable(of: RosterEntryResponse.self) { (response) in
-            guard let rosterReponse = response.value else { return }
-            self.rosterEntry = rosterReponse.rosterEntry
+    
+    func fetchRosterEntry() {
+        rosterApi().fetchRosterEntry(rosterId: rosterId) { rosterResponse in
+            print("Response, roster ID = \(rosterResponse.rosterEntry.id)")
+            self.rosterEntry = rosterResponse.rosterEntry
             self.state = .loaded
         }
     }

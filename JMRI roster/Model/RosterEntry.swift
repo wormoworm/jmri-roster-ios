@@ -23,18 +23,22 @@ final class RosterEntryResponse: Decodable {
     }
 }
 
-final class RosterEntry: Decodable, Identifiable {
+class RosterEntry: Codable, Identifiable {
     
+    var id: String
+    var dccAddress: String
+    var number: String?
+    var name: String?
+    var manufacturer: String?
+    var model: String?
+    var owner: String?
+    var comment: String?
+    var functions: [Function]?
     
-    let id: String
-    let dccAddress: String
-    let number: String?
-    let name: String?
-    let manufacturer: String?
-    let model: String?
-    let owner: String?
-    let comment: String?
-    let functions: [Function]?
+    init(id: String, dccAddress: String) {
+        self.id = id
+        self.dccAddress = dccAddress
+    }
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -61,10 +65,10 @@ final class RosterEntry: Decodable, Identifiable {
     }
 }
 
-final class Function: Decodable {
-    let number: Int
-    let name: String
-    let lockable: Bool
+final class Function: Codable {
+    var number: Int
+    var name: String
+    var lockable: Bool
     
     enum CodingKeys: String, CodingKey {
         case number

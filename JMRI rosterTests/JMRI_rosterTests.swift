@@ -6,6 +6,7 @@
 //
 
 import XCTest
+
 @testable import JMRI_roster
 
 class JMRI_rosterTests: XCTestCase {
@@ -19,8 +20,7 @@ class JMRI_rosterTests: XCTestCase {
     }
 
     func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
     }
 
     func testPerformanceExample() throws {

@@ -15,10 +15,46 @@ struct RosterEntryView: View {
     @ObservedObject private(set) var viewModel: RosterEntryViewModel
     
     var body: some View {
-        VStack {
-            LazyImage(source: "\(baseUrl)/locomotive/\(self.viewModel.rosterEntry?.id ?? "66789")/image/1000")
-                .contentMode(.aspectFit)
-        }.navigationTitle(self.viewModel.rosterEntry!.id)
+        ScrollView(.vertical){
+            GeometryReader { geometry in
+                VStack(alignment: .leading) {
+                    Unwrap(self.viewModel.rosterEntry) { rosterEntry in
+                        LazyImage(source: "\(baseUrl)/locomotive/\(rosterEntry.id)/image/1000")
+                            .contentMode(.aspectFit)
+                            .frame(width: geometry.size.width, height: geometry.size.width / 16 * 9)
+                        VStack(alignment: .leading) {
+                            Text("Locomotive info")
+                            Text("Name")
+                            Text(rosterEntry.name ?? "-")
+                                .fixedSize(horizontal: false, vertical: true)
+                            Text("DCC address")
+                            Text(rosterEntry.dccAddress)
+                        }
+                        .padding(10)
+                        .frame(maxWidth: .infinity)
+                        .background(Color.gray)
+                        if rosterEntry.comment != nil {
+                            VStack(alignment: .leading) {
+                                Text("Comments")
+                                Text(rosterEntry.comment ?? "-")
+                                    .fixedSize(horizontal: false, vertical: true)
+                            }
+                            .padding(10)
+                        }
+                        if rosterEntry.hasFunctions() {
+                            VStack(alignment: .leading) {
+                                Text("Comments")
+                                Text(rosterEntry.comment ?? "-")
+                                    .fixedSize(horizontal: false, vertical: true)
+                            }
+                            .padding(10)
+                        }
+                    }
+                }
+                .frame(maxWidth: .infinity)
+                .onAppear(perform: viewModel.fetchRosterEntry)
+            }
+        }
     }
 }
 

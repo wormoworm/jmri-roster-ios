@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28143FE226737BF600DA92A3 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28143FE126737BF600DA92A3 /* ViewUtils.swift */; };
 		2842D6B4266FACC7004B018A /* AppLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2842D6B3266FACC7004B018A /* AppLoadingView.swift */; };
 		2842D6B6266FAFCF004B018A /* RosterEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2842D6B5266FAFCF004B018A /* RosterEntryView.swift */; };
 		2842D6B9266FB15A004B018A /* RosterEntryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2842D6B8266FB15A004B018A /* RosterEntryViewModel.swift */; };
@@ -26,6 +27,7 @@
 		28D5D63D266E71240088E1FB /* RosterListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D5D63C266E71240088E1FB /* RosterListItemView.swift */; };
 		28D5D640266EE1D80088E1FB /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 28D5D63F266EE1D80088E1FB /* Nuke */; };
 		28D5D643266EE2870088E1FB /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 28D5D642266EE2870088E1FB /* NukeUI */; };
+		28DD943D267122B400245D4A /* RosterApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DD943C267122B400245D4A /* RosterApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28143FE126737BF600DA92A3 /* ViewUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewUtils.swift; sourceTree = "<group>"; };
 		2842D6B3266FACC7004B018A /* AppLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLoadingView.swift; sourceTree = "<group>"; };
 		2842D6B5266FAFCF004B018A /* RosterEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterEntryView.swift; sourceTree = "<group>"; };
 		2842D6B8266FB15A004B018A /* RosterEntryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterEntryViewModel.swift; sourceTree = "<group>"; };
@@ -68,6 +71,7 @@
 		286D0436266A79BC00F5AEAE /* RosterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterViewModel.swift; sourceTree = "<group>"; };
 		286D043C266A7B2400F5AEAE /* RosterEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterEntry.swift; sourceTree = "<group>"; };
 		28D5D63C266E71240088E1FB /* RosterListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterListItemView.swift; sourceTree = "<group>"; };
+		28DD943C267122B400245D4A /* RosterApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,7 @@
 		286D0405266A5FD700F5AEAE /* JMRI roster */ = {
 			isa = PBXGroup;
 			children = (
+				28DD943B2671227C00245D4A /* Api */,
 				2842D6B7266FB110004B018A /* ViewModel */,
 				28D5D63B266E70EF0088E1FB /* Views */,
 				286D043B266A7B0700F5AEAE /* Model */,
@@ -186,8 +191,17 @@
 				2842D6B3266FACC7004B018A /* AppLoadingView.swift */,
 				2842D6B5266FAFCF004B018A /* RosterEntryView.swift */,
 				2842D6BC266FB77D004B018A /* RosterListView.swift */,
+				28143FE126737BF600DA92A3 /* ViewUtils.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		28DD943B2671227C00245D4A /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				28DD943C267122B400245D4A /* RosterApi.swift */,
+			);
+			path = Api;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,9 +343,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28143FE226737BF600DA92A3 /* ViewUtils.swift in Sources */,
 				286D0413266A5FD900F5AEAE /* JMRI_roster.xcdatamodeld in Sources */,
 				2842D6B4266FACC7004B018A /* AppLoadingView.swift in Sources */,
 				286D0410266A5FD900F5AEAE /* Persistence.swift in Sources */,
+				28DD943D267122B400245D4A /* RosterApi.swift in Sources */,
 				286D0437266A79BC00F5AEAE /* RosterViewModel.swift in Sources */,
 				286D0409266A5FD700F5AEAE /* RosterView.swift in Sources */,
 				28D5D63D266E71240088E1FB /* RosterListItemView.swift in Sources */,
