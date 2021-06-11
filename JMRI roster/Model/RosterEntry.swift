@@ -65,7 +65,7 @@ class RosterEntry: Codable, Identifiable {
     }
 }
 
-final class Function: Codable {
+final class Function: Codable, Identifiable {
     var number: Int
     var name: String
     var lockable: Bool

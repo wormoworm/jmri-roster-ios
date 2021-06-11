@@ -20,7 +20,7 @@ struct RosterEntryView: View {
                 VStack(alignment: .leading) {
                     Unwrap(self.viewModel.rosterEntry) { rosterEntry in
                         LazyImage(source: "\(baseUrl)/locomotive/\(rosterEntry.id)/image/1000")
-                            .contentMode(.aspectFit)
+                            .contentMode(.aspectFill)
                             .frame(width: geometry.size.width, height: geometry.size.width / 16 * 9)
                         VStack(alignment: .leading) {
                             Text("Locomotive info")
@@ -42,17 +42,27 @@ struct RosterEntryView: View {
                             .padding(10)
                         }
                         if rosterEntry.hasFunctions() {
-                            VStack(alignment: .leading) {
-                                Text("Comments")
-                                Text(rosterEntry.comment ?? "-")
-                                    .fixedSize(horizontal: false, vertical: true)
-                            }
+                            RosterEntryFunctionsView(functions: rosterEntry.functions!)
                             .padding(10)
                         }
                     }
                 }
                 .frame(maxWidth: .infinity)
                 .onAppear(perform: viewModel.fetchRosterEntry)
+            }
+        }
+    }
+}
+
+struct RosterEntryFunctionsView: View {
+    
+    private(set) var functions: [Function]
+    
+    var body: some View {
+        VStack(alignment: .leading) {
+            Text("Functions")
+            List(self.functions) { function in
+                Text(function.name)
             }
         }
     }
