@@ -24,6 +24,7 @@
 		286D0437266A79BC00F5AEAE /* RosterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D0436266A79BC00F5AEAE /* RosterViewModel.swift */; };
 		286D043A266A7A8A00F5AEAE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 286D0439266A7A8A00F5AEAE /* Alamofire */; };
 		286D043D266A7B2400F5AEAE /* RosterEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286D043C266A7B2400F5AEAE /* RosterEntry.swift */; };
+		28A5356F2677B67C00D47D2B /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A5356E2677B67C00D47D2B /* Styles.swift */; };
 		28D5D63D266E71240088E1FB /* RosterListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D5D63C266E71240088E1FB /* RosterListItemView.swift */; };
 		28D5D640266EE1D80088E1FB /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 28D5D63F266EE1D80088E1FB /* Nuke */; };
 		28D5D643266EE2870088E1FB /* NukeUI in Frameworks */ = {isa = PBXBuildFile; productRef = 28D5D642266EE2870088E1FB /* NukeUI */; };
@@ -70,6 +71,7 @@
 		286D042A266A5FD900F5AEAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		286D0436266A79BC00F5AEAE /* RosterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterViewModel.swift; sourceTree = "<group>"; };
 		286D043C266A7B2400F5AEAE /* RosterEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterEntry.swift; sourceTree = "<group>"; };
+		28A5356E2677B67C00D47D2B /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		28D5D63C266E71240088E1FB /* RosterListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterListItemView.swift; sourceTree = "<group>"; };
 		28DD943C267122B400245D4A /* RosterApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -192,6 +194,7 @@
 				2842D6B5266FAFCF004B018A /* RosterEntryView.swift */,
 				2842D6BC266FB77D004B018A /* RosterListView.swift */,
 				28143FE126737BF600DA92A3 /* ViewUtils.swift */,
+				28A5356E2677B67C00D47D2B /* Styles.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -349,6 +352,7 @@
 				286D0410266A5FD900F5AEAE /* Persistence.swift in Sources */,
 				28DD943D267122B400245D4A /* RosterApi.swift in Sources */,
 				286D0437266A79BC00F5AEAE /* RosterViewModel.swift in Sources */,
+				28A5356F2677B67C00D47D2B /* Styles.swift in Sources */,
 				286D0409266A5FD700F5AEAE /* RosterView.swift in Sources */,
 				28D5D63D266E71240088E1FB /* RosterListItemView.swift in Sources */,
 				2842D6B9266FB15A004B018A /* RosterEntryViewModel.swift in Sources */,
@@ -518,7 +522,7 @@
 				DEVELOPMENT_TEAM = 5DXAVCJLMU;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "JMRI roster/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -540,7 +544,7 @@
 				DEVELOPMENT_TEAM = 5DXAVCJLMU;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "JMRI roster/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

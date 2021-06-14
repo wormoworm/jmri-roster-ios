@@ -15,35 +15,38 @@ struct RosterEntryView: View {
     @ObservedObject private(set) var viewModel: RosterEntryViewModel
     
     var body: some View {
-        ScrollView(.vertical){
-            GeometryReader { geometry in
-                VStack(alignment: .leading) {
-                    Unwrap(self.viewModel.rosterEntry) { rosterEntry in
+        GeometryReader { geometry in
+            ScrollView(.vertical){
+                Unwrap(self.viewModel.rosterEntry) { rosterEntry in
+                    LazyVStack(alignment: .leading, spacing: 16) {
                         LazyImage(source: "\(baseUrl)/locomotive/\(rosterEntry.id)/image/1000")
                             .contentMode(.aspectFill)
                             .frame(width: geometry.size.width, height: geometry.size.width / 16 * 9)
-                        VStack(alignment: .leading) {
+                        LazyVStack(alignment: .leading, spacing: 0) {
                             Text("Locomotive info")
+                                .style(TextStyleContentBlockTitle())
                             Text("Name")
+                                .style(TextStyleFieldLabel())
                             Text(rosterEntry.name ?? "-")
-                                .fixedSize(horizontal: false, vertical: true)
+                                .style(TextStyleField())
                             Text("DCC address")
+                                .style(TextStyleFieldLabel())
                             Text(rosterEntry.dccAddress)
+                                .style(TextStyleField())
                         }
-                        .padding(10)
                         .frame(maxWidth: .infinity)
-                        .background(Color.gray)
+                        .style(StyleContentBlock())
                         if rosterEntry.comment != nil {
-                            VStack(alignment: .leading) {
+                            LazyVStack(alignment: .leading, spacing: 0) {
                                 Text("Comments")
+                                    .style(TextStyleContentBlockTitle())
                                 Text(rosterEntry.comment ?? "-")
-                                    .fixedSize(horizontal: false, vertical: true)
+                                    .style(TextStyleField())
                             }
-                            .padding(10)
+                            .style(StyleContentBlock())
                         }
                         if rosterEntry.hasFunctions() {
                             RosterEntryFunctionsView(functions: rosterEntry.functions!)
-                            .padding(10)
                         }
                     }
                 }
@@ -59,12 +62,14 @@ struct RosterEntryFunctionsView: View {
     private(set) var functions: [Function]
     
     var body: some View {
-        VStack(alignment: .leading) {
+        LazyVStack(alignment: .leading, spacing: 0) {
             Text("Functions")
+                .style(TextStyleContentBlockTitle())
             List(self.functions) { function in
                 Text(function.name)
             }
         }
+        .style(StyleContentBlock())
     }
 }
 

@@ -21,14 +21,18 @@ struct RosterListItemView: View {
     var body: some View {
         HStack {
             LazyImage(source: "\(baseUrl)/locomotive/\(rosterEntry.id)/image/100")
+                .padding(0)
                 .scaledToFill()
                 .frame(width: 50, height: 50)
                 .clipped()
-            VStack(alignment: .leading) {
+            VStack(alignment: .leading, spacing: 8) {
                 Text(rosterEntry.id)
+                    .style(TextStyleListItemTitle())
                 Text(rosterEntry.name ?? "")
+                    .style(TextStyleField())
             }
         }
+        .padding(0)
     }
 }
 

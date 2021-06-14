@@ -16,12 +16,8 @@ struct RosterView: View {
         case .loading:
             AppLoadingView()
         case .loaded:
-            VStack {
-                Button(action: viewModel.fetchRosterEntries) {
-                    Label("Fetch roster", systemImage: "square.and.arrow.down")
-                }
-                RosterListView(viewModel: self.viewModel)
-            }
+            RosterListView(viewModel: self.viewModel)
+                .padding(0)
         }
     }
 }

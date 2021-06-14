@@ -12,13 +12,16 @@ struct RosterListView: View {
     @ObservedObject private(set) var viewModel: RosterViewModel
     
     var body: some View {
-        NavigationView {
+        NavigationView {                
             List(viewModel.rosterEntries) { rosterEntry in
-                NavigationLink(destination: RosterEntryView(viewModel: RosterEntryViewModel(rosterId: rosterEntry.id))) {
+                NavigationLink(destination: RosterEntryView(viewModel: RosterEntryViewModel(rosterId: rosterEntry.id)).navigationTitle(rosterEntry.id)) {
                     RosterListItemView(rosterEntry: rosterEntry)
                 }
+                .padding(0)
             }.navigationTitle("Roster")
+            .padding(0)
         }
+        .padding(0)
     }
 }
 

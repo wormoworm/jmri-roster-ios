@@ -15,6 +15,7 @@ struct JMRI_rosterApp: App {
         WindowGroup {
             RosterView(viewModel: RosterViewModel())
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .padding(0)
         }
     }
 }
